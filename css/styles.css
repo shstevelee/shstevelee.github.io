@@ -191,6 +191,7 @@ footer {
   border-radius: 50%;
   box-shadow: var(--box-shadow);
   transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
 }
 
 .social-icons .icon i {
