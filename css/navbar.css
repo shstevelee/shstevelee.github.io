@@ -1,0 +1,69 @@
+/* Floating Navbar */
+.floating-navbar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #fff; /* Plain white background */
+  color: #000; /* Black text */
+  width: 60px; /* Collapsed width */
+  transition: width 0.3s ease;
+  border-radius: 8px 0 0 8px;
+  overflow: hidden;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.floating-navbar:hover {
+  width: 200px; /* Expanded width */
+}
+
+.floating-navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.floating-navbar li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /* Light gray border for separation */
+  text-align: center;
+}
+
+.floating-navbar li:last-child {
+  border-bottom: none;
+}
+
+.floating-navbar a {
+  text-decoration: none;
+  color: #000; /* Black text color */
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: padding-left 0.3s ease, color 0.3s ease;
+}
+
+.floating-navbar a .icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.floating-navbar a .label {
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover Effects */
+.floating-navbar:hover a .label {
+  opacity: 1;
+}
+
+.floating-navbar li:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Subtle hover effect */
+  cursor: pointer;
+}
