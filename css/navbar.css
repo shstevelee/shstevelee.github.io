@@ -14,8 +14,15 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.floating-navbar:hover {
-  width: 200px; /* Expanded width */
+@media (min-width: 601px) {
+  .floating-navbar:hover {
+    width: 200px; /* Expanded width */
+  }
+}
+@media (max-width: 600px) {
+  .floating-navbar:focus {
+    width: 200px;
+  }
 }
 
 .floating-navbar ul {
