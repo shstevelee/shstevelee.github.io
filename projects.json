@@ -1,15 +1,8 @@
 [
   {
-    "name": "MyWriter",
-    "description": "MyWriter is an app that provides personalized writing to readers. Built with Next.js and LLM APIs, it attempted to solve the struggle of ideation for writers and lack of involvement for readers.",
-    "thumbnail": "img/MyWriterLogo.svg",
-    "projectUrl": "https://github.com/C4fune/Sturgeon-Pro-Shops-Tartan-Hacks/",
-    "githubUrl": "https://github.com/C4fune/Sturgeon-Pro-Shops-Tartan-Hacks/"
-  },
-  {
     "name": "Villa Mirador",
     "description": "A small web-dev project I made to learn bootstrap, css and js animations",
-    "thumbnail": "images/VillaMiradorLogo.svg",
+    "thumbnail": "img/VillaMiradorLogo.svg",
     "projectUrl": "https://villamirador.netlify.app/",
     "githubUrl": "https://github.com/shstevelee/villamirador"
   }

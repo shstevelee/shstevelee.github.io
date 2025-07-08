@@ -1,9 +1,9 @@
 // Load projects from JSON file
-async function loadProjects() {
+async function loadProjects(projectType) {
   try {
-    const response = await fetch("projects.json");
+    const response = await fetch(`${projectType}.json`);
     const projects = await response.json();
-    displayProjects(projects);
+    displayProjects(projects, projectType);
   } catch (error) {
     console.error("Error loading projects:", error);
     // Fallback content if JSON fails to load
@@ -13,8 +13,8 @@ async function loadProjects() {
 }
 
 // Display projects in the grid
-function displayProjects(projects) {
-  const projectGrid = document.getElementById("projectGrid");
+function displayProjects(projects, projectType) {
+  const projectGrid = document.getElementById(`${projectType}Grid`);
   projectGrid.innerHTML = "";
 
   projects.forEach((project) => {
@@ -58,8 +58,9 @@ function showSection(sectionId) {
   document.getElementById(sectionId).classList.add("active");
 
   // Load projects when projects section is shown
-  if (sectionId === "projects") {
-    loadProjects();
+  if (sectionId === "projects" || sectionId === "events") {
+    console.log(sectionId);
+    loadProjects(sectionId);
   }
 }
 
