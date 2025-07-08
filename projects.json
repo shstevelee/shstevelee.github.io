@@ -1,9 +1,32 @@
 [
   {
-    "name": "Villa Mirador",
-    "description": "A small web-dev project I made to learn bootstrap, css and js animations",
-    "thumbnail": "img/VillaMiradorLogo.svg",
-    "projectUrl": "https://villamirador.netlify.app/",
-    "githubUrl": "https://github.com/shstevelee/villamirador"
+    "id": "project-1",
+    "name": "Smart Home Automation System",
+    "description": "Developed an IoT-based smart home system for lighting and climate control.",
+    "thumbnail": "https://placehold.co/400x200/ADD8E6/000000?text=Project+1+Thumbnail",
+    "fullImage": "https://placehold.co/800x400/ADD8E6/000000?text=Project+1+Full+Image",
+    "longDescription": "<p>This project involved designing and implementing a comprehensive smart home automation system using Raspberry Pi, various sensors (temperature, light), and actuators (relays for lights, fan control). The system allowed users to control their home environment remotely via a web interface.</p><p>Key features included automated lighting based on ambient light, temperature-controlled fan operation, and a user-friendly dashboard for manual overrides and status monitoring. Challenges included optimizing sensor data processing and ensuring robust communication between devices.</p>",
+    "projectUrl": "https://example.com/project1",
+    "githubUrl": "https://github.com/shstevelee/smarthome"
+  },
+  {
+    "id": "project-2",
+    "name": "FPGA-based Image Processing",
+    "description": "Implemented real-time image filtering algorithms on an FPGA.",
+    "thumbnail": "https://placehold.co/400x200/90EE90/000000?text=Project+2+Thumbnail",
+    "fullImage": "https://placehold.co/800x400/90EE90/000000?text=Project+2+Full+Image",
+    "longDescription": "<p>This project focused on accelerating image processing tasks using Field-Programmable Gate Arrays (FPGAs). I developed VHDL code for common image filters such as Gaussian blur and edge detection (Sobel filter), demonstrating significant performance improvements over software-only implementations.</p><p>The work involved understanding hardware description languages, parallel processing concepts, and optimizing algorithms for FPGA architecture. It provided valuable insights into the power of hardware acceleration for computationally intensive applications.</p>",
+    "projectUrl": null,
+    "githubUrl": "https://github.com/shstevelee/fpga-image-proc"
+  },
+  {
+    "id": "project-3",
+    "name": "Custom ASIC Design for AI Accelerator",
+    "description": "Designed a custom integrated circuit for neural network inference.",
+    "thumbnail": "https://placehold.co/400x200/FFD700/000000?text=Project+3+Thumbnail",
+    "fullImage": "https://placehold.co/800x400/FFD700/000000?text=Project+3+Full+Image",
+    "longDescription": "<p>As part of a course, I contributed to the design of a custom Application-Specific Integrated Circuit (ASIC) tailored for accelerating neural network inference. My role involved logic design, simulation, and verification of key arithmetic units.</p><p>This experience provided hands-on exposure to the ASIC design flow, from high-level architectural considerations to gate-level implementation and timing analysis. It deepened my understanding of specialized hardware for AI workloads.</p>",
+    "projectUrl": null,
+    "githubUrl": null
   }
 ]

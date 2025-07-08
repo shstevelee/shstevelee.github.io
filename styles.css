@@ -1,41 +1,53 @@
-@import url("https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Lato:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap");
 
-.cactus-classical-serif-regular {
-  font-family: "Cactus Classical Serif", serif;
+.playfair-display-regular {
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.lato-thin {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
+.playfair-display-bold {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
   font-style: normal;
 }
 
-.lato-regular {
-  font-family: "Lato", sans-serif;
+.lora-regular {
+  font-family: "Lora", serif;
   font-weight: 400;
+  font-style: normal;
+}
+
+.lora-bold {
+  font-family: "Lora", serif;
+  font-weight: 700;
   font-style: normal;
 }
 
 :root {
-  --primary-bg: #f5f5f5;
-  --primary-text: #181f1c;
-  --secondary-text: #315c2b;
-  --heading-color: #274029;
-  --button-primary: #60712f;
-  --button-primary-hover: #9ea93f;
+  /* New Color Palette: 19th Century Watchsmith meets Cutting Edge Tech */
+  --primary-bg: #fdfdfd; /* Very light, almost white, with a hint of cream */
+  --primary-text: #2c3a47; /* Deep Charcoal Blue - sophisticated and strong */
+  --secondary-text: #334557; /* Muted Blue-Grey - for softer text */
+  --heading-color: #2c3a47; /* Same as primary text for consistency */
+
+  --button-primary: #4a6d7c; /* Muted Teal/Slate Blue - elegant and tech-inspired */
+  --button-primary-hover: #3a5c6b; /* Darker shade for hover, adding depth */
+  --link-color: #8b7e67; /* Muted Gold/Brass - evoking classic watch elements */
+  --link-hover: #a39071; /* Slightly brighter Gold/Brass for hover */
+
+  --white: #ffffff;
+  --card-bg: #ffffff; /* Clean white for cards to stand out */
+  --card-shadow: rgba(0, 0, 0, 0.08); /* Lighter, more subtle shadow */
+  --skill-tag-bg: #e6eaeb; /* Very light grey-blue, subtle and clean */
+
+  /* Social media colors (kept as they are standard) */
   --icon-default: #555;
   --icon-hover: #333;
   --github-color: #333;
   --linkedin-color: #0077b5;
   --twitter-color: #1da1f2;
   --email-color: #ea4335;
-  --white: #ffffff;
-  --card-bg: #ffffff;
-  --card-shadow: rgba(0, 0, 0, 0.1);
-  --skill-tag-bg: #ecf0f1;
-  --link-color: #9ea93f;
 }
 
 * {
@@ -45,13 +57,14 @@
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Lora", serif; /* Body text with a classic, readable serif */
   background-color: var(--primary-bg);
   color: var(--primary-text);
   line-height: 1.6;
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  min-height: 100vh;
 }
 
 h1,
@@ -60,37 +73,28 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Cactus Classical Serif";
+  font-family: "Playfair Display", serif; /* Headings with an elegant, distinct serif */
+  font-weight: 700; /* Bold for impact */
 }
 
 .container {
   max-width: 600px;
   padding: 20px;
   text-align: left;
+  width: 100%;
 }
 
 /* Section transitions */
 .section {
-  opacity: 0;
-  transform: translateX(30px);
-  transition: all 0.3s ease;
-  display: none;
-}
-
-/* I will be adding cool transitions! */
-.section.active {
   opacity: 1;
-  transform: translateX(0);
-  display: block;
+  padding: 20px 0;
 }
 
-@media screen and (min-width: 768px) {
-  .section.vertical-center.active {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.vertical-center {
+  min-height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .back-button {
@@ -124,16 +128,22 @@ h6 {
   color: var(--white);
   padding: 10px 18px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px; /* Slightly less rounded than before for a sharper, more classic feel */
   cursor: pointer;
   font-size: 1em;
-  transition: background-color 0.3s ease;
+  /* Refined transition for a more precise, mechanical feel */
+  transition: background-color 0.3s ease, transform 0.15s ease-out,
+    box-shadow 0.15s ease-out;
   text-decoration: none;
   display: inline-block;
+  position: relative; /* For potential future pseudo-element effects */
+  overflow: hidden; /* Ensures any overflow from effects is hidden */
 }
 
 .nav-button:hover {
   background-color: var(--button-primary-hover);
+  transform: translateY(-3px); /* Slightly more pronounced lift */
+  box-shadow: 0 6px 12px var(--card-shadow); /* Deeper shadow for more emphasis */
 }
 
 /* Resume link styles */
@@ -145,27 +155,33 @@ h6 {
   color: var(--button-primary);
   padding: 7px 20px;
   border: 2px solid var(--button-primary);
-  border-radius: 25px;
+  border-radius: 20px; /* Slightly less rounded */
   text-decoration: none;
-  transition: all 0.3s ease;
+  /* Refined transition for a more precise, mechanical feel */
+  transition: all 0.3s ease, transform 0.15s ease-out, box-shadow 0.15s ease-out;
   cursor: pointer;
   font-weight: bold;
+  position: relative;
+  overflow: hidden;
 }
 
 .resume-button:hover {
   background-color: var(--button-primary);
   color: var(--white);
+  transform: translateY(-3px); /* Slightly more pronounced lift */
+  box-shadow: 0 6px 12px var(--card-shadow); /* Deeper shadow for more emphasis */
 }
 
 .resume-download {
   margin-top: 0.2rem;
 }
 
-/* Project styles */
+/* Project/Content Grid styles */
 .project-grid {
   display: grid;
   gap: 25px;
   margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .project-card {
@@ -173,11 +189,15 @@ h6 {
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 2px 8px var(--card-shadow);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Added box-shadow to transition */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px); /* Consistent lift */
+  box-shadow: 0 6px 12px var(--card-shadow); /* Consistent shadow */
 }
 
 .project-card h3 {
@@ -189,6 +209,7 @@ h6 {
 .project-card p {
   color: var(--secondary-text);
   margin-bottom: 15px;
+  flex-grow: 1;
 }
 
 .project-thumbnail {
@@ -203,6 +224,7 @@ h6 {
 .project-links {
   display: flex;
   gap: 15px;
+  margin-top: auto;
 }
 
 .project-link {
@@ -213,7 +235,7 @@ h6 {
 }
 
 .project-link:hover {
-  color: var(--button-primary-hover);
+  color: var(--link-hover);
 }
 
 /* About styles */
@@ -276,5 +298,41 @@ h6 {
 }
 
 .contact-item a:hover {
-  color: var(--button-primary-hover);
+  color: var(--link-hover);
+}
+
+/* New styles for DetailComponent */
+.detail-content {
+  margin-top: 20px;
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--card-shadow);
+}
+
+.detail-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.detail-description {
+  color: var(--secondary-text);
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.long-description {
+  color: var(--primary-text);
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
 }

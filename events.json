@@ -1,9 +1,22 @@
 [
   {
-    "name": "MyWriter",
-    "description": "MyWriter is an app that provides personalized writing to readers. Built with Next.js and LLM APIs, it attempted to solve the struggle of ideation for writers and lack of involvement for readers.",
-    "thumbnail": "img/MyWriterLogo.svg",
-    "projectUrl": "https://github.com/C4fune/Sturgeon-Pro-Shops-Tartan-Hacks/",
-    "githubUrl": "https://github.com/C4fune/Sturgeon-Pro-Shops-Tartan-Hacks/"
+    "id": "event-1",
+    "name": "HackCMU 2024",
+    "description": "Participated in Carnegie Mellon's annual hackathon, focusing on sustainable tech.",
+    "thumbnail": "https://placehold.co/400x200/F08080/000000?text=Event+1+Thumbnail",
+    "fullImage": "https://placehold.co/800x400/F08080/000000?text=Event+1+Full+Image",
+    "longDescription": "<p>At HackCMU 2024, my team developed an innovative solution for energy consumption monitoring in smart buildings. We utilized sensor data to identify energy waste patterns and provided actionable insights through a user-friendly dashboard.</p><p>The event was an intense 36-hour coding marathon, fostering collaboration and rapid prototyping. It was a great opportunity to apply my skills to real-world problems and learn from peers and mentors.</p>",
+    "projectUrl": "https://devpost.com/software/energy-saver-app",
+    "githubUrl": "https://github.com/shstevelee/hackcmu2024-project"
+  },
+  {
+    "id": "event-2",
+    "name": "ECE Department Research Showcase",
+    "description": "Presented my research on novel memory architectures.",
+    "thumbnail": "https://placehold.co/400x200/87CEEB/000000?text=Event+2+Thumbnail",
+    "fullImage": "https://placehold.co/800x400/87CEEB/000000?text=Event+2+Full+Image",
+    "longDescription": "<p>I had the privilege to present my ongoing research on next-generation computer memory architectures at the annual ECE Department Research Showcase. My presentation covered the challenges of traditional memory systems and proposed novel approaches to improve data access efficiency and reduce power consumption.</p><p>This experience was invaluable for refining my presentation skills and engaging with faculty and industry professionals on cutting-edge topics in computer engineering.</p>",
+    "projectUrl": null,
+    "githubUrl": null
   }
 ]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "cert-1",
+    "name": "Deep Learning Specialization",
+    "description": "Completed Coursera's Deep Learning Specialization by Andrew Ng.",
+    "thumbnail": "https://placehold.co/400x200/D3D3D3/000000?text=Cert+1+Thumbnail",
+    "fullImage": "https://placehold.co/800x400/D3D3D3/000000?text=Cert+1+Full+Image",
+    "longDescription": "<p>This specialization covered the foundational concepts of deep learning, including neural networks, convolutional networks, recurrent networks, and transformers. I gained practical experience with TensorFlow and Keras, implementing various models for image recognition, natural language processing, and sequence modeling.</p><p>The course significantly enhanced my understanding of modern AI techniques and their applications.</p>",
+    "projectUrl": "https://www.coursera.org/account/accomplishments/specialization/certificate/YOUR_CERT_ID_HERE",
+    "githubUrl": null
+  },
+  {
+    "id": "cert-2",
+    "name": "AWS Certified Cloud Practitioner",
+    "description": "Achieved foundational certification in AWS cloud services.",
+    "thumbnail": "https://placehold.co/400x200/B0C4DE/000000?text=Cert+2+Thumbnail",
+    "fullImage": "https://placehold.co/800x400/B0C4DE/000000?text=Cert+2+Full+Image",
+    "longDescription": "<p>The AWS Certified Cloud Practitioner certification validates my foundational understanding of AWS cloud concepts, services, security, architecture, pricing, and support. It provided a broad overview of the AWS platform and its core offerings.</p><p>This certification is a stepping stone for further exploration into cloud computing and its role in modern software and hardware infrastructure.</p>",
+    "projectUrl": "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+    "githubUrl": null
+  }
+]
