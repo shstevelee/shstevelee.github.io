@@ -1,3 +1,96 @@
+// Global variable to hold the animation interval ID
+let animationIntervalId = null;
+let animationRunning = true; // State to track if animation is running
+
+// Function to start the background animation
+function startBackgroundAnimation() {
+  const canvas = document.getElementById("background-canvas");
+  if (!canvas) {
+    console.error("Background canvas not found!");
+    return;
+  }
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const characters =
+    "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+-=[]{}|;:,.<>?";
+  const fontSize = 16;
+  const columns = canvas.width / fontSize;
+
+  const drops = [];
+  for (let i = 0; i < columns; i++) {
+    drops[i] = 1;
+  }
+
+  function draw() {
+    // Semi-transparent rectangle to fade out old characters
+    // Corresponds to #121111 (primary-bg) with opacity
+    ctx.fillStyle = "rgba(26, 26, 42, 0.08)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Set color for the falling characters
+    // Corresponds to #677d8b (link-color)
+    ctx.fillStyle = "#677d8b";
+    ctx.font = `${fontSize}px Space Mono`;
+
+    for (let i = 0; i < drops.length; i++) {
+      const text = characters.charAt(
+        Math.floor(Math.random() * characters.length)
+      );
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+
+      drops[i]++;
+    }
+  }
+
+  // Clear any existing interval before starting a new one
+  if (animationIntervalId) {
+    clearInterval(animationIntervalId);
+  }
+  animationIntervalId = setInterval(draw, 50); // Slower animation speed
+  animationRunning = true;
+
+  // Handle canvas resizing
+  window.addEventListener("resize", handleCanvasResize);
+}
+
+// Function to stop the background animation
+function stopBackgroundAnimation() {
+  if (animationIntervalId) {
+    clearInterval(animationIntervalId);
+    animationIntervalId = null;
+    animationRunning = false;
+    // Optionally clear the canvas when stopped
+    const canvas = document.getElementById("background-canvas");
+    if (canvas) {
+      const ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+  }
+  window.removeEventListener("resize", handleCanvasResize);
+}
+
+// Resize handler for the canvas
+function handleCanvasResize() {
+  const canvas = document.getElementById("background-canvas");
+  if (canvas) {
+    const ctx = canvas.getContext("2d");
+    const fontSize = 16; // Keep consistent with draw function
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    // Re-initialize drops array for new column count if needed, or simply let `draw` handle it
+    // For simplicity, we'll just let the next draw call adjust.
+    // If we wanted to re-initialize drops array, it would require passing it around or re-creating animation context.
+    // For now, just resizing the canvas is sufficient to prevent drawing issues.
+  }
+}
+
 // 1. Define your components
 // Home Component
 const HomeComponent = {
@@ -76,7 +169,10 @@ const ContentGridComponent = {
         <router-link to="/" class="nav-button">← Back</router-link>
       </div>
       <h1 class="name">{{ type.charAt(0).toUpperCase() + type.slice(1) }}</h1>
-      <div v-if="loading">Loading {{ type }}...</div>
+      <div v-if="loading" class="loader-container">
+        <div class="loader"></div>
+        <p>Loading {{ type }}...</p>
+      </div>
       <div v-else-if="error" class="error-message">{{ error }}</div>
       <div v-else class="project-grid">
         <div v-for="item in items" :key="item.id" class="project-card">
@@ -141,7 +237,10 @@ const DetailComponent = {
       <div class="back-button">
         <router-link :to="'/' + type" class="nav-button">← Back to {{ type.charAt(0).toUpperCase() + type.slice(1) }}</router-link>
       </div>
-      <div v-if="loading">Loading details...</div>
+      <div v-if="loading" class="loader-container">
+        <div class="loader"></div>
+        <p>Loading details...</p>
+      </div>
       <div v-else-if="error" class="error-message">{{ error }}</div>
       <div v-else-if="item" class="detail-content">
         <h1 class="name">{{ item.name }}</h1>
@@ -265,7 +364,63 @@ const router = VueRouter.createRouter({
   routes, // short for `routes: routes`
 });
 
+// New Root App Component to hold router-view and global elements
+const RootApp = {
+  data() {
+    return {
+      isAnimationRunning: animationRunning, // Initialize with global state
+    };
+  },
+  methods: {
+    toggleAnimation() {
+      if (this.isAnimationRunning) {
+        stopBackgroundAnimation();
+      } else {
+        startBackgroundAnimation();
+      }
+      this.isAnimationRunning = !this.isAnimationRunning; // Update local state
+    },
+  },
+  template: `
+    <div class="main-app-wrapper">
+      <div class="container">
+        <router-view></router-view>
+      </div>
+      <!-- Play/Pause Animation Button - always present -->
+      <button @click="toggleAnimation" class="animation-toggle-button">
+        <svg v-if="isAnimationRunning" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14,19H18V5H14M6,19H10V5H6V19Z" />
+        </svg>
+        <svg v-else width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+        </svg>
+      </button>
+    </div>
+  `,
+};
+
 // 4. Create and mount the root instance
-const app = Vue.createApp({});
+const app = Vue.createApp(RootApp); // Mount the new RootApp component
 app.use(router); // Use the router
 app.mount("#app"); // Mount the app to the #app div in index.html
+
+// Background Animation Logic (Digital Rain / Matrix Effect)
+window.onload = function () {
+  // Start the animation when the window loads
+  startBackgroundAnimation();
+
+  // Handle canvas resizing
+  window.addEventListener("resize", () => {
+    // Only re-start animation if it was running, to re-initialize drops
+    if (animationRunning) {
+      startBackgroundAnimation();
+    } else {
+      // If animation is stopped, just resize canvas without drawing
+      const canvas = document.getElementById("background-canvas");
+      if (canvas) {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+    }
+  });
+};
