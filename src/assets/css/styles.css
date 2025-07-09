@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap");
 
-/* New Font Definitions (retained for classy look) */
+/* Fonts for classy look */
 .playfair-display-regular {
   font-family: "Playfair Display", serif;
   font-weight: 400;
@@ -25,8 +25,6 @@
   font-style: normal;
 }
 
-/* Space Mono is no longer imported as it's not used for content or animation */
-
 :root {
   /* PCB-inspired Color Palette: Dark Green/Black, Gold/Silver Text, Gold/Silver Highlights */
   --primary-bg: #1a2c2c; /* Dark teal-green, like a PCB */
@@ -48,7 +46,6 @@
     110,
     0.2
   ); /* Subtle transparent gold/silver border for cards */
-  --card-shadow: none; /* No shadows for a flat look */
   --skill-tag-bg: rgba(
     235,
     229,
@@ -85,8 +82,6 @@ body {
   position: relative; /* For potential future absolute positioning of elements */
 }
 
-/* Removed background-canvas styles */
-
 h1,
 h2,
 h3,
@@ -99,16 +94,14 @@ h6 {
 }
 
 .container {
-  max-width: 700px; /* Fixed max-width for namecard feel */
-  padding: 40px; /* More generous padding for a premium feel */
+  max-width: 700px;
+  padding: 40px;
   text-align: left;
   width: 100%;
-  background-color: transparent; /* No background color for content area */
-  border-radius: 0; /* No rounding, flat look */
-  box-shadow: none; /* No shadows */
+  background-color: transparent;
   position: relative;
   z-index: 1;
-  margin: 0; /* No margin, content directly on background */
+  margin: 0;
 }
 
 /* Section transitions (still useful for Vue Router) */
@@ -190,7 +183,6 @@ h6 {
 
 .nav-button:hover {
   color: var(--link-hover); /* Change text color on hover */
-  box-shadow: none; /* No shadows */
 }
 
 /* Resume link styles */
@@ -215,7 +207,6 @@ h6 {
   background-color: transparent;
   color: var(--button-hover-text); /* Change text color on hover */
   border-color: var(--button-hover-text); /* Change border color on hover */
-  box-shadow: none; /* No shadows */
 }
 
 .resume-download {
@@ -239,13 +230,11 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: none; /* No shadows */
 }
 
 .project-card:hover {
   transform: scale(1.01); /* Subtle enlarge effect */
   border-color: var(--link-hover); /* Highlight border on hover */
-  box-shadow: none; /* No shadows */
 }
 
 .project-card h3 {
@@ -394,7 +383,6 @@ h6 {
   padding: 25px;
   border-radius: 8px;
   border: 1px solid var(--card-border); /* Subtle border */
-  box-shadow: none; /* No shadows */
 }
 
 .detail-image {
