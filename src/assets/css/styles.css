@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap");
+
+/* New Font Definitions (retained for classy look) */
+.playfair-display-regular {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.playfair-display-bold {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lora-regular {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lora-bold {
+  font-family: "Lora", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Space Mono is no longer imported as it's not used for content or animation */
+
+:root {
+  /* PCB-inspired Color Palette: Dark Green/Black, Gold/Silver Text, Gold/Silver Highlights */
+  --primary-bg: #1a2c2c; /* Dark teal-green, like a PCB */
+  --primary-text: #a0a0a0; /* Light grey/silver for primary text */
+  --secondary-text: #d0d0d0; /* Muted grey for secondary text */
+  --heading-color: #ebe56e; /* Vibrant gold/silver for headings and accents */
+
+  /* Buttons and Links will use these colors for text/border */
+  --button-text: #ebe56e; /* Gold/silver for button text/outline */
+  --button-hover-text: #ddcb5f; /* Slightly darker gold/silver on hover */
+  --link-default: #d0d0d0; /* Default link color, matching primary text */
+  --link-hover: #ebe56e; /* Gold/silver for link hover (underline) */
+
+  --white: #ffffff; /* Still useful for some elements if needed */
+  --card-bg: transparent; /* Cards will blend with background */
+  --card-border: rgba(
+    235,
+    229,
+    110,
+    0.2
+  ); /* Subtle transparent gold/silver border for cards */
+  --card-shadow: none; /* No shadows for a flat look */
+  --skill-tag-bg: rgba(
+    235,
+    229,
+    110,
+    0.05
+  ); /* Very subtle transparent gold/silver for skill tags */
+  --skill-tag-text: #ebe56e; /* Gold/silver for skill tag text */
+
+  /* Social media colors (adjusted for dark background) */
+  --icon-default: #d0d0d0; /* Light grey/silver for icons */
+  --icon-hover: #ebe56e; /* Gold/silver on hover */
+  --github-color: #d0d0d0;
+  --linkedin-color: #0077b5; /* Standard LinkedIn blue */
+  --twitter-color: #1da1f2; /* Standard Twitter blue */
+  --email-color: #ea4335; /* Standard email red */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lora", serif; /* Applied Lora for body text */
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  line-height: 1.6;
+  display: flex;
+  align-items: center; /* Center content vertically in the viewport */
+  justify-content: center; /* Center content horizontally */
+  min-height: 100vh; /* Ensure body takes full viewport height */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  position: relative; /* For potential future absolute positioning of elements */
+}
+
+/* Removed background-canvas styles */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif; /* Applied Playfair Display for headings */
+  font-weight: 700; /* Bold for impact */
+  color: var(--heading-color);
+}
+
+.container {
+  max-width: 700px; /* Fixed max-width for namecard feel */
+  padding: 40px; /* More generous padding for a premium feel */
+  text-align: left;
+  width: 100%;
+  background-color: transparent; /* No background color for content area */
+  border-radius: 0; /* No rounding, flat look */
+  box-shadow: none; /* No shadows */
+  position: relative;
+  z-index: 1;
+  margin: 0; /* No margin, content directly on background */
+}
+
+/* Section transitions (still useful for Vue Router) */
+.section {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+  padding: 0; /* Removed section padding as container has it */
+}
+
+/* Vertical centering for specific sections */
+.vertical-center {
+  min-height: auto; /* Allow these sections to fit content within the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align content to the start */
+}
+
+.back-button {
+  margin-bottom: 20px;
+}
+
+.name {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--heading-color);
+}
+
+.intro {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+  color: var(--secondary-text);
+  max-width: 500px;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  background-color: transparent; /* No background fill */
+  color: var(--link-default); /* Default link color */
+  padding: 3px 2px;
+  border: none; /* No border for link-like button */
+  border-radius: 0; /* No rounding */
+  cursor: pointer;
+  font-size: 1em;
+  text-decoration: none; /* No default underline */
+  display: inline-block;
+  position: relative; /* For underline animation */
+  overflow: hidden;
+  font-weight: 500; /* Consistent font weight with links */
+  transition: color 0.3s ease; /* Transition color only */
+}
+
+.nav-button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px; /* Underline thickness */
+  display: block;
+  margin-top: 2px;
+  right: 0;
+  background: var(--link-hover); /* Underline color */
+  transition: width 0.3s ease;
+}
+
+.nav-button:hover::after {
+  width: 100%;
+  left: 0;
+  background: var(--link-hover);
+}
+
+.nav-button:hover {
+  color: var(--link-hover); /* Change text color on hover */
+  box-shadow: none; /* No shadows */
+}
+
+/* Resume link styles */
+.resume-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  color: var(--button-text); /* Color from new button text variable */
+  padding: 7px 20px;
+  border: 2px solid var(--button-text); /* Outline border */
+  border-radius: 25px; /* Fully rounded */
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, border-color 0.3s ease; /* Transition color and border */
+}
+
+.resume-button:hover {
+  background-color: transparent;
+  color: var(--button-hover-text); /* Change text color on hover */
+  border-color: var(--button-hover-text); /* Change border color on hover */
+  box-shadow: none; /* No shadows */
+}
+
+.resume-download {
+  margin-top: 0.2rem;
+}
+
+/* Project/Content Grid styles */
+.project-grid {
+  display: grid;
+  gap: 25px;
+  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.project-card {
+  background-color: var(--card-bg); /* Transparent background */
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid var(--card-border); /* Subtle border for cards */
+  transition: border-color 0.2s ease, transform 0.2s ease; /* Transition border and transform */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: none; /* No shadows */
+}
+
+.project-card:hover {
+  transform: scale(1.01); /* Subtle enlarge effect */
+  border-color: var(--link-hover); /* Highlight border on hover */
+  box-shadow: none; /* No shadows */
+}
+
+.project-card h3 {
+  color: var(--heading-color);
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.project-card p {
+  color: var(--secondary-text);
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.project-link {
+  color: var(--link-default); /* Default link color */
+  text-decoration: none;
+  font-weight: 500;
+  position: relative; /* For underline animation */
+  transition: color 0.3s ease;
+}
+
+.project-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px; /* Underline thickness */
+  display: block;
+  margin-top: 2px;
+  right: 0;
+  background: var(--link-hover); /* Underline color */
+  transition: width 0.3s ease;
+}
+
+.project-link:hover::after {
+  width: 100%;
+  left: 0;
+  background: var(--link-hover);
+}
+
+.project-link:hover {
+  color: var(--link-hover); /* Change text color on hover */
+}
+
+/* About styles */
+.about-content {
+  margin-top: 20px;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  color: var(--secondary-text);
+}
+
+.about-content h3 {
+  color: var(--heading-color);
+  margin: 25px 0 15px 0;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background-color: var(--skill-tag-bg);
+  color: var(--skill-tag-text);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+/* Contact styles */
+.contact-content {
+  margin-top: 20px;
+}
+
+.contact-content p {
+  margin-bottom: 25px;
+  color: var(--secondary-text);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  font-size: 1.1em;
+}
+
+.contact-item strong {
+  color: var(--heading-color);
+}
+
+.contact-item a {
+  color: var(--link-default); /* Default link color */
+  text-decoration: none;
+  position: relative; /* For underline animation */
+  transition: color 0.3s ease;
+}
+
+.contact-item a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px; /* Underline thickness */
+  display: block;
+  margin-top: 2px;
+  right: 0;
+  background: var(--link-hover); /* Underline color */
+  transition: width 0.3s ease;
+}
+
+.contact-item a:hover::after {
+  width: 100%;
+  left: 0;
+  background: var(--link-hover);
+}
+
+.contact-item a:hover {
+  color: var(--link-hover); /* Change text color on hover */
+}
+
+/* Styles for Details Page*/
+.detail-content {
+  background-color: transparent; /* Blend with background */
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid var(--card-border); /* Subtle border */
+  box-shadow: none; /* No shadows */
+}
+
+.detail-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.detail-description {
+  color: var(--secondary-text);
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.long-description {
+  color: var(--primary-text);
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Placeholder for circuit elements */
+.circuit-element-placeholder {
+  position: absolute;
+  opacity: 0.05; /* Even more subtle */
+  z-index: 0; /* Behind the main content */
+  color: var(--heading-color); /* Use gold/silver for the elements */
+}
+
+/* Specific positions for placeholders (adjust as needed) */
+.circuit-element-top-left {
+  top: 40px;
+  left: 5%;
+  width: 80px;
+  height: 80px;
+}
+
+.circuit-element-bottom-right {
+  bottom: 40px;
+  right: 5%;
+  width: 100px;
+  height: 100px;
+}

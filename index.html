@@ -5,11 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seunghyeok Lee - Portfolio</title>
     <!-- Link to your main stylesheet. Component-specific styles will be handled by Vue. -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./src/assets/css/styles.css" />
+
+    <!-- Import Map for module resolution -->
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
+          "vue-router": "https://unpkg.com/vue-router@4/dist/vue-router.esm-browser.js",
+          "@vue/devtools-api": "https://unpkg.com/@vue/devtools-api@6.5.0/lib/esm/index.js"
+        }
+      }
+    </script>
   </head>
   <body>
-    <!-- Canvas for background animation -->
-    <canvas id="background-canvas"></canvas>
+    <!-- Placeholders for circuit elements -->
+    <div class="circuit-element-placeholder circuit-element-top-left">
+      <!-- SVG for a Resistor -->
+      <svg
+        width="100%"
+        height="100%"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+      </svg>
+    </div>
+    <div class="circuit-element-placeholder circuit-element-bottom-right">
+      <!-- SVG for a Capacitor -->
+      <svg
+        width="100%"
+        height="100%"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="2" y1="12" x2="8" y2="12"></line>
+        <line x1="16" y1="12" x2="22" y2="12"></line>
+        <line x1="8" y1="5" x2="8" y2="19"></line>
+        <line x1="16" y1="5" x2="16" y2="19"></line>
+      </svg>
+    </div>
 
     <!-- The main div where the Vue application will be mounted -->
     <div id="app">
@@ -19,11 +62,8 @@
       </div>
     </div>
 
-    <!-- Vue.js CDN - Use the global build for direct browser use -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <!-- Vue Router CDN - For handling navigation between sections/pages -->
-    <script src="https://unpkg.com/vue-router@4"></script>
     <!-- Your main Vue application logic -->
-    <script src="app.js"></script>
+    <!-- Note: main.js must be loaded AFTER the importmap -->
+    <script src="./src/main.js" type="module"></script>
   </body>
 </html>
