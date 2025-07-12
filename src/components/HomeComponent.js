@@ -2,6 +2,7 @@
 const HomeComponent = {
   template: `
     <div class="section active vertical-center">
+      <img src="./src/assets/img/logos/gamjagoguma_logo_padding.svg" alt="Personal Logo" class="personal-logo">
       <h1 class="name">Seunghyeok Lee</h1>
       <p class="intro">
         Hi! I'm Seunghyeok, a Sophomore at Carnegie Mellon University studying
@@ -13,8 +14,8 @@ const HomeComponent = {
       <div class="nav-buttons">
         <router-link to="/projects" class="nav-button">Projects</router-link>
         <router-link to="/events" class="nav-button">Events</router-link>
-        <router-link to="/arts" class="nav-button">Arts</router-link>
-        <router-link to="/certificates" class="nav-button">Certificates</router-link>
+        <router-link to="/creative" class="nav-button">Creative</router-link>
+        <router-link to="/research" class="nav-button">Research</router-link>
         <router-link to="/about" class="nav-button">About</router-link>
         <router-link to="/contact" class="nav-button">Contact</router-link>
       </div>

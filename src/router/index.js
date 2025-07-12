@@ -23,11 +23,15 @@ const routes = [
     component: ContentGridComponent,
     props: { type: "events" },
   },
-  { path: "/arts", component: ContentGridComponent, props: { type: "arts" } },
   {
-    path: "/certificates",
+    path: "/creative",
     component: ContentGridComponent,
-    props: { type: "certificates" },
+    props: { type: "creative" },
+  },
+  {
+    path: "/research",
+    component: ContentGridComponent,
+    props: { type: "research" },
   },
   { path: "/about", component: AboutComponent },
   { path: "/contact", component: ContactComponent },

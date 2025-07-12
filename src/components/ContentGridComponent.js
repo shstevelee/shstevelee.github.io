@@ -1,6 +1,6 @@
 // ContentGridComponent.js
 const ContentGridComponent = {
-  props: ["type"], // 'type' will be 'projects', 'events', 'arts', 'certificates'
+  props: ["type"], // 'type' will be 'projects', 'events', 'creative', 'research'
   data() {
     return {
       items: [],
