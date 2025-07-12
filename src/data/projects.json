@@ -24,8 +24,6 @@
     "name": "Principles of Imperative Computation - Final Project: C0 Virtual Machine",
     "description": "Learned the basics of compilers and virtual machines",
     "thumbnail": "https://placehold.co/400x200/90EE90/000000?text=15122+C0VM",
-    "longDescription": "<p>Programmed the virtual machine for the C0 programming language using C; developed knowledge of bytecode instructions, Just-in-Time compilation, and WORA (write once, run anywhere)</p>",
-    "projectUrl": null,
-    "githubUrl": "https://github.com/shstevelee/fpga-image-proc"
+    "longDescription": "<p>Programmed the virtual machine for the C0 programming language using C; developed knowledge of bytecode instructions, Just-in-Time compilation, and WORA (write once, run anywhere)</p>"
   }
 ]
