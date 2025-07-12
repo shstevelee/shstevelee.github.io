@@ -1,32 +1,31 @@
 [
   {
+    "id": "project-3",
+    "name": "Portfolio Website",
+    "description": "Designed and developed this website while experimenting with various design styles and modern web frameworks to explore layout, responsiveness, and user interaction.",
+    "thumbnail": "src/assets/img/portfolio_screenshot.png",
+    "images": [
+      "src/assets/img/portfolio_raining_chars.gif",
+      "src/assets/img/portfolio_screenshot.png",
+      "src/assets/img/portfolio_screenshot_1.png"
+    ],
+    "longDescription": "<p>I began building this website using Bootstrap to quickly prototype the layout and styling. However, I soon switched back to vanilla HTML, CSS, and JavaScript to gain more control over the structure and behavior of the site. Eventually, I decided to do a full redesign using the Vue.js CDN for a more dynamic and component-based approach. Along the way, I reorganized the project's file structure to better separate concerns and improve scalability, resulting in a cleaner, more maintainable codebase.</p>",
+    "links": { "Github": "https://github.com/shstevelee/shstevelee.github.io" }
+  },
+  {
     "id": "project-1",
-    "name": "Smart Home Automation System",
-    "description": "Developed an IoT-based smart home system for lighting and climate control.",
-    "thumbnail": "https://placehold.co/400x200/ADD8E6/000000?text=Project+1+Thumbnail",
-    "fullImage": "https://placehold.co/800x400/ADD8E6/000000?text=Project+1+Full+Image",
-    "longDescription": "<p>This project involved designing and implementing a comprehensive smart home automation system using Raspberry Pi, various sensors (temperature, light), and actuators (relays for lights, fan control). The system allowed users to control their home environment remotely via a web interface.</p><p>Key features included automated lighting based on ambient light, temperature-controlled fan operation, and a user-friendly dashboard for manual overrides and status monitoring. Challenges included optimizing sensor data processing and ensuring robust communication between devices.</p>",
-    "projectUrl": "https://example.com/project1",
-    "githubUrl": "https://github.com/shstevelee/smarthome"
+    "name": "Computer Systems - Cache Simulator & Matrix Transpose Optimizer",
+    "description": "Wrote a cache simulator and optimized matrix transpose algorithm for the Haswell L1 cache.",
+    "thumbnail": "https://placehold.co/400x200/ADD8E6/000000?text=18213+Cache+Lab",
+    "longDescription": "<p>Wrote a cache simulator to simulate memory load, store instructions and cache hits/misses/evictions, based on the dimensions of the cache provided. Optimized a matrix transpose algorithm for the Haswell L1 cache to increase cache hits and reduce the number of total cycles; placed 2nd out of 184 students.</p>"
   },
   {
     "id": "project-2",
-    "name": "FPGA-based Image Processing",
-    "description": "Implemented real-time image filtering algorithms on an FPGA.",
-    "thumbnail": "https://placehold.co/400x200/90EE90/000000?text=Project+2+Thumbnail",
-    "fullImage": "https://placehold.co/800x400/90EE90/000000?text=Project+2+Full+Image",
-    "longDescription": "<p>This project focused on accelerating image processing tasks using Field-Programmable Gate Arrays (FPGAs). I developed VHDL code for common image filters such as Gaussian blur and edge detection (Sobel filter), demonstrating significant performance improvements over software-only implementations.</p><p>The work involved understanding hardware description languages, parallel processing concepts, and optimizing algorithms for FPGA architecture. It provided valuable insights into the power of hardware acceleration for computationally intensive applications.</p>",
+    "name": "Principles of Imperative Computation - Final Project: C0 Virtual Machine",
+    "description": "Learned the basics of compilers and virtual machines",
+    "thumbnail": "https://placehold.co/400x200/90EE90/000000?text=15122+C0VM",
+    "longDescription": "<p>Programmed the virtual machine for the C0 programming language using C; developed knowledge of bytecode instructions, Just-in-Time compilation, and WORA (write once, run anywhere)</p>",
     "projectUrl": null,
     "githubUrl": "https://github.com/shstevelee/fpga-image-proc"
-  },
-  {
-    "id": "project-3",
-    "name": "Custom ASIC Design for AI Accelerator",
-    "description": "Designed a custom integrated circuit for neural network inference.",
-    "thumbnail": "https://placehold.co/400x200/FFD700/000000?text=Project+3+Thumbnail",
-    "fullImage": "https://placehold.co/800x400/FFD700/000000?text=Project+3+Full+Image",
-    "longDescription": "<p>As part of a course, I contributed to the design of a custom Application-Specific Integrated Circuit (ASIC) tailored for accelerating neural network inference. My role involved logic design, simulation, and verification of key arithmetic units.</p><p>This experience provided hands-on exposure to the ASIC design flow, from high-level architectural considerations to gate-level implementation and timing analysis. It deepened my understanding of specialized hardware for AI workloads.</p>",
-    "projectUrl": null,
-    "githubUrl": null
   }
 ]

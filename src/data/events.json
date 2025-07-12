@@ -1,22 +1,56 @@
 [
   {
     "id": "event-1",
-    "name": "HackCMU 2024",
-    "description": "Participated in Carnegie Mellon's annual hackathon, focusing on sustainable tech.",
-    "thumbnail": "https://placehold.co/400x200/F08080/000000?text=Event+1+Thumbnail",
-    "fullImage": "https://placehold.co/800x400/F08080/000000?text=Event+1+Full+Image",
-    "longDescription": "<p>At HackCMU 2024, my team developed an innovative solution for energy consumption monitoring in smart buildings. We utilized sensor data to identify energy waste patterns and provided actionable insights through a user-friendly dashboard.</p><p>The event was an intense 36-hour coding marathon, fostering collaboration and rapid prototyping. It was a great opportunity to apply my skills to real-world problems and learn from peers and mentors.</p>",
-    "projectUrl": "https://devpost.com/software/energy-saver-app",
-    "githubUrl": "https://github.com/shstevelee/hackcmu2024-project"
+    "name": "TartanHacks 2025",
+    "description": "Participated in Carnegie Mellon's largest annual hackathon.",
+    "thumbnail": "src/assets/img/tartanhacks.svg",
+    "images": ["src/assets/img/TartanHacks25_main.jpg"],
+    "longDescription": "<p>At TartanHacks25, we built 'Mywriter': a web app that matches writers to readers, allowing readers to send personalized story requests to writers and allowing writers to respond to those requests with professional storylines which would then be expanded using an LLM.</p>",
+    "links": {
+      "Github": "https://github.com/C4fune/Sturgeon-Pro-Shops-Tartan-Hacks",
+      "Event Website": "https://tartanhacks.com/",
+      "Pitch Slides": "src/assets/pdfs/Mywriter_PitchDeck.pdf"
+    }
   },
   {
     "id": "event-2",
-    "name": "ECE Department Research Showcase",
-    "description": "Presented my research on novel memory architectures.",
-    "thumbnail": "https://placehold.co/400x200/87CEEB/000000?text=Event+2+Thumbnail",
-    "fullImage": "https://placehold.co/800x400/87CEEB/000000?text=Event+2+Full+Image",
-    "longDescription": "<p>I had the privilege to present my ongoing research on next-generation computer memory architectures at the annual ECE Department Research Showcase. My presentation covered the challenges of traditional memory systems and proposed novel approaches to improve data access efficiency and reduce power consumption.</p><p>This experience was invaluable for refining my presentation skills and engaging with faculty and industry professionals on cutting-edge topics in computer engineering.</p>",
-    "projectUrl": null,
-    "githubUrl": null
+    "name": "MSCF Datathon",
+    "description": "Tuned hyperparameters and optimized feature selection.",
+    "thumbnail": "src/assets/img/mscf_datathon_banner.png",
+    "images": ["src/assets/img/mscf_datathon_group.png"],
+    "longDescription": "<p>The Datathon is CMU MSCF's (Master of Science in Computational Finance) annual flagship event, where student teams design, train, and deploy their own trading bots to compete in a simulated trading environment. Our team—composed of first-year students from Business, Mathematics, Computer Science, and ECE—placed 4th in the simulation round, using real market data from 2021 to 2023.</p>",
+    "links": {
+      "Youtube Video": "https://www.youtube.com/watch?v=ufXnnkv8QJ0",
+      "Event Website": "https://www.cmu.edu/mscf/competitions/datathon.html"
+    }
+  },
+  {
+    "id": "event-5",
+    "name": "CMU Quant x Optiver Market Making Game 2025",
+    "description": "Placed 6th in trading and 5th in estimation out of 20 teams at the annual Optiver Market Making game.",
+    "thumbnail": "src/assets/img/optiver_market_making.jpg",
+    "images": ["src/assets/img/optiver_market_making.jpg"],
+    "longDescription": "<p>The Market Making Game is an annual event hosted by CMU's Quant Club, designed to simulate real-world trading scenarios. We explored quirky facts about Optiver’s global offices while learning how to leverage collective intelligence to estimate the value of obscure options. Thoughout the competition, we experienced the difficulties of navigating low-liquidity markets and saw firsthand how critical accurate pricing information is to effective market making.</p>",
+    "links": null
+  },
+  {
+    "id": "event-3",
+    "name": "NOVA",
+    "description": "CMU's AI Hackathon, Safety Documentation Parser",
+    "thumbnail": "src/assets/img/nova.webp",
+    "images": ["src/assets/img/nova.webp"],
+    "longDescription": "<p>We participated in the second-ever NOVA Hackathon, a one-day event where students were given premium access to leading AI tools to build innovative products. Our team developed an AI-powered parser for lab safety documentation, designed to help researchers quickly extract and reference critical information—such as handling procedures, spill response, and injury treatment—for chemicals used in the lab. We envisioned scaling the tool to cover a wider range of lab materials, including measurement devices and electrical components in ECE labs, as well as biological agents in life science labs. We also proposed integrating the system with AI voice assistants, enabling researchers in emergency situations to call out for help instead of scrambling through documentation.</p>",
+    "links": {
+      "Github": "https://github.com/88Mangos/NOVA24"
+    }
+  },
+  {
+    "id": "event-4",
+    "name": "2024 BSCF Hedging Competition",
+    "description": "Hedged options as a team of three freshmen who knew nothing about replicating portfolios",
+    "thumbnail": "src/assets/img/bscf_hedging_competition.png",
+    "images": ["src/assets/img/bscf_hedging_competition.png"],
+    "longDescription": "<p>I participated in the BSCF Hedging Competition with two other freshmen students studying Business and Math. We learned about the Black-Scholes Equation, basics of option pricing, and hedging with greeks like delta and gamma.</p>",
+    "links": null
   }
 ]
