@@ -22,7 +22,7 @@ const HomeComponent = {
 
       <div class="resume-download">
         <a
-          href="resumes/resume.pdf"
+          href="src/assets/pdfs/resume.pdf"
           class="resume-button"
           target="_blank"
           rel="noopener noreferrer"
