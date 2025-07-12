@@ -6,13 +6,13 @@
     "thumbnail": "src/assets/img/KingsPhotos/SeunghyeokLeeCircles5.jpg",
     "images": [
       "src/assets/img/KingsPhotos/SeunghyeokLeeCircles5.jpg",
-      "src/assets/img/KingsPhotos/SeunghyeokLeeNature1.JPG",
       "src/assets/img/KingsPhotos/SeunghyeokLeeNature2.JPG",
-      "src/assets/img/KingsPhotos/SeunghyeokLeeBlur3.jpg"
+      "src/assets/img/KingsPhotos/SeunghyeokLeeBlur3.jpg",
+      "src/assets/img/KingsPhotos/SeunghyeokLeeNature1.JPG"
     ],
     "longDescription": "<p>A novice photography portfolio made in my Digital Arts Class in 9th grade. You can see the pictures become more and more refined as I evolve from thinking everything and anything is aesthetic to learning where and how to find my own aesthetic.</p>",
     "links": {
-      "View Full Portfolio": "src/assets/pdfs/KingsPhotos/KingsPhotos.pdf"
+      "View Full Portfolio": "src/assets/pdfs/KingsPhotos.pdf"
     }
   },
   {
