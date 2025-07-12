@@ -94,7 +94,7 @@ h6 {
 }
 
 .container {
-  max-width: 700px;
+  max-width: 900px;
   padding: 40px;
   text-align: left;
   width: 100%;
@@ -123,6 +123,15 @@ h6 {
 
 .back-button {
   margin-bottom: 20px;
+}
+
+.personal-logo {
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
+  object-fit: contain; /* Ensures the image fits without distortion */
+  margin-bottom: 5px; /* Space between logo and name */
+  border-radius: 50%; /* Optional: if you want a circular logo */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Very subtle light border */
 }
 
 .name {
