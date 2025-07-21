@@ -17,7 +17,7 @@
     "name": "Computer Systems - Cache Simulator & Matrix Transpose Optimizer",
     "description": "Wrote a cache simulator and optimized matrix transpose algorithm for the Haswell L1 cache.",
     "thumbnail": "https://placehold.co/400x200/ADD8E6/000000?text=18213+Cache+Lab",
-    "longDescription": "<p>Wrote a cache simulator to simulate memory load, store instructions and cache hits/misses/evictions, based on the dimensions of the cache provided. Optimized a matrix transpose algorithm for the Haswell L1 cache to increase cache hits and reduce the number of total cycles; placed 2nd out of 184 students.</p>"
+    "longDescription": "<p>Wrote a cache simulator to simulate memory load, store instructions and cache hits/misses/evictions, based on the dimensions of the cache provided. Optimized a matrix transpose algorithm for the Haswell L1 cache to increase cache hits and reduce the number of total cycles; placed 2nd out of 195 students.</p>"
   },
   {
     "id": "project-2",
