@@ -1,5 +1,17 @@
 [
   {
+    "id": "project-4",
+    "name": "CMU Quantum Computing Club Website",
+    "description": "Designed and developed the website for CMU Quantum Computing Club.",
+    "thumbnail": "src/assets/img/cmuqc_screenshot.png",
+    "longDescription": "<p>When I arrived at CMU, the Quantum Computing Club was still in its infancy—barely more than an idea. Founded just the previous semester, it had no website, minimal visibility, and only a single event: an IBM Qiskit workshop. When the club's founder, Rhik, brought me on board, I jumped into action: I designed every vector element and coded the website, recruited a social media lead, and helped push forward a partnership with Superposia, a quantum computing startup co-founded by my friend Henry.</p>",
+    "images": ["src/assets/img/cmuqc_screenshot.png"],
+    "links": {
+      "Github": "https://github.com/CMU-QC",
+      "Website": "https://cmuquantum.org/"
+    }
+  },
+  {
     "id": "project-3",
     "name": "Portfolio Website",
     "description": "Designed and developed this website while experimenting with various design styles and modern web frameworks to explore layout, responsiveness, and user interaction.",
