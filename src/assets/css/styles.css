@@ -27,7 +27,7 @@
 
 :root {
   /* PCB-inspired Color Palette: Dark Green/Black, Gold/Silver Text, Gold/Silver Highlights */
-  --primary-bg: #1a2c2c; /* Dark teal-green, like a PCB */
+  --primary-bg: #0f0f0f; /* Dark teal-green, like a PCB */
   --primary-text: #a0a0a0; /* Light grey/silver for primary text */
   --secondary-text: #d0d0d0; /* Muted grey for secondary text */
   --heading-color: #ebe56e; /* Vibrant gold/silver for headings and accents */
