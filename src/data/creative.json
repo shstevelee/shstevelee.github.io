@@ -19,8 +19,8 @@
     "id": "art-2",
     "name": "Illustrator Works",
     "description": "My works on the Adobe Illustrator and Figma",
-    "thumbnail": "src/assets/img/Octopus.png",
-    "images": ["src/assets/img/Octopus.png"],
+    "thumbnail": "src/assets/img/octopus_dark.png",
+    "images": ["src/assets/img/octopus_light.png"],
     "longDescription": "<p>A curated collection of my design projects created using Adobe Illustrator and Figma. It showcases a range of visual work, including logo designs, website layouts, branding concepts, and other creative explorations in digital design.</p>",
     "links": {
       "View Works": "https://drive.google.com/file/d/1_3Ka4pVWifdXkL0myeYozZ5MSuKoX_7v/view?usp=sharing"
