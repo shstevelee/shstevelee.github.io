@@ -17,7 +17,7 @@ function RotatingCube() {
   return (
     <mesh ref={meshRef}>
       <boxGeometry args={[2.5, 2.5, 2.5]} />
-      <meshStandardMaterial color="black" wireframe thickness={2} />
+      <meshStandardMaterial color="black" wireframe />
     </mesh>
   );
 }
