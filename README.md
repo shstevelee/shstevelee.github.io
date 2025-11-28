@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+ECE PORTFOLIO V2
 
-## Getting Started
+A high-performance, industrial-themed portfolio website built for the modern hardware engineer.
+Designed to showcase Embedded Systems, VLSI, and R&D projects with technical depth.
 
-First, run the development server:
+⚡ The Stack (Bleeding Edge)
 
-```bash
+This project runs on a custom configuration of the latest React ecosystem tools to support high-fidelity 3D rendering without compromising load times.
+
+Framework: Next.js 15 (App Router)
+
+Core: React 19 (Release Candidate)
+
+Styling: Tailwind CSS v3 (Industrial Theme)
+
+3D Engine: React Three Fiber v9 (Canvas + WebGL)
+
+Animation: Framer Motion (Layout transitions)
+
+Deployment: GitHub Actions (Static Export)
+
+🚀 Getting Started
+
+Prerequisites
+
+Node.js v20+ (LTS recommended)
+
+npm or pnpm
+
+Installation
+
+Clone the repository:
+
+git clone [https://github.com/shstevelee/shstevelee.github.io.git](https://github.com/shstevelee/shstevelee.github.io.git)
+cd yourusername.github.io
+
+Install dependencies:
+Note: This project uses specific versions of R3F and React 19 to ensure compatibility.
+
+npm install
+
+Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🛠️ Configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Project Data
 
-## Learn More
+All project data is decoupled from the UI. To add new projects, hackathons, or research papers, edit the data file:
 
-To learn more about Next.js, take a look at the following resources:
+Location: src/data/projects.ts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Supported Types: HARDWARE, SOFTWARE, R&D, CONFIDENTIAL
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3D Scene
 
-## Deploy on Vercel
+The background 3D element is a separate component that can be swapped out.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Location: src/components/Scene.tsx
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Industrial Theme
+
+Colors and fonts are controlled via Tailwind configuration and CSS variables.
+
+Colors: Safety Yellow (#FFD028) & Industrial Black (#1A1A1A)
+
+Font: Oswald (Google Fonts)
+
+📦 Deployment
+
+This project is configured for GitHub Pages.
+
+Go to repository Settings > Pages.
+
+Set Source to "GitHub Actions".
+
+Push to the main branch.
+
+The included workflow will automatically build and deploy the static site.
+
+Engineered by Seunghyeok Lee.
