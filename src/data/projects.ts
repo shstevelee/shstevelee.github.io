@@ -8,7 +8,7 @@ export interface Project {
   description: string;
   stack: string[];
   linkText: string;
-  href: string; // <--- New Field for the actual URL
+  href: string;
   meta?: string;
 }
 
